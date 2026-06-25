@@ -53,6 +53,11 @@ rendered from the same `tokens.css` / `styles.css`.
   MCP config; the bridge alone only exposes current state.
 - When the design and code both change, apply the same edits in both places
   (e.g. the rename was scripted across files *and* applied to Figma text nodes).
+- **Sync workflow:** `figma-sync/` holds a snapshot-based Figma→code sync (no
+  token needed). Run `capture.js` via the bridge → save to
+  `figma-sync/current.json` → `node figma-sync/diff.mjs figma-sync/current.json`
+  to see what changed since the last sync, then update code + re-baseline the
+  snapshot. Full steps in `figma-sync/SYNC.md`.
 
 ## Deploy
 - Repo: `jubejuss/northvale-trust-prototype` (public). GitHub Pages from
