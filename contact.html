@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – The Northvale Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="contact">
+  <header id="site-header"></header>
+
+  <main class="site-main">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title">Contact Us</h1>
+        <p class="page-header__subtitle">Make initial enquiries, establish eligibility, or request a call.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h2 class="contact-card__title">Send us an enquiry</h2>
+            <form class="form" data-contact-form novalidate>
+              <p class="form__status" tabindex="-1" hidden></p>
+              <div class="form-field">
+                <label class="form-field__label" for="name">Your name</label>
+                <input class="form-field__control" id="name" name="name" type="text" placeholder="Enter your name" required />
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="email">Email address</label>
+                <input class="form-field__control" id="email" name="email" type="email" placeholder="you@charity.org" required />
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="message">Message</label>
+                <textarea class="form-field__control" id="message" name="message" placeholder="Type your enquiry..." required></textarea>
+              </div>
+              <div>
+                <button class="btn btn--primary" type="submit">Send enquiry</button>
+              </div>
+            </form>
+          </div>
+
+          <dl class="contact-details">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:grants@northvale.org">grants@northvale.org</a></dd>
+            </div>
+            <div>
+              <dt>Telephone</dt>
+              <dd><a href="tel:+442079460321">+44 (0) 20 7946 0321</a></dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>Northvale House, 40 Charterhouse Street, London EC1M 6JN</dd>
+            </div>
+            <div>
+              <dt>Feedback</dt>
+              <dd>We welcome feedback via our online feedback form.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
