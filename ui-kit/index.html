@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Kit &amp; Design System – The Northvale Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="ui-kit.css" />
+</head>
+<body>
+  <header class="kit-header">
+    <div class="kit-header__inner">
+      <p class="eyebrow eyebrow--on-brand">Design system</p>
+      <h1 class="kit-header__title">The Northvale Trust – UI Kit</h1>
+      <p class="kit-header__subtitle">Living documentation of the tokens and components used across the prototype. Everything here is rendered from the same <code>tokens.css</code> and <code>styles.css</code> as the live site.</p>
+      <nav class="kit-toc" aria-label="Sections">
+        <a href="#colours">Colours</a>
+        <a href="#spacing">Spacing</a>
+        <a href="#radius">Radius</a>
+        <a href="#type">Typography</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#forms">Form fields</a>
+        <a href="#cards">Cards</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#navfoot">Navbar &amp; Footer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- COLOURS -->
+    <section class="kit-section" id="colours">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Colours</h2>
+        <p class="kit-section__desc">Defined as CSS custom properties in <code>tokens.css</code>, mirroring the Figma variables. Reference them with <code>var(--token)</code> – never hard-code hex values.</p>
+      </div>
+      <div class="kit-body">
+        <div class="kit-grid kit-grid--swatch">
+          <div class="swatch"><div class="swatch__chip" style="background:var(--action-primary)"></div><div class="swatch__meta"><p class="swatch__name">Action / Primary</p><p class="swatch__var">--action-primary</p><p class="swatch__hex">#0f7a6e</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--action-primary-hover)"></div><div class="swatch__meta"><p class="swatch__name">Action / Primary hover</p><p class="swatch__var">--action-primary-hover</p><p class="swatch__hex">#159385</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--action-secondary)"></div><div class="swatch__meta"><p class="swatch__name">Action / Secondary</p><p class="swatch__var">--action-secondary</p><p class="swatch__hex">#0f2540</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--accent)"></div><div class="swatch__meta"><p class="swatch__name">Accent</p><p class="swatch__var">--accent</p><p class="swatch__hex">#1aa597</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--bg-brand)"></div><div class="swatch__meta"><p class="swatch__name">Brand surface</p><p class="swatch__var">--bg-brand</p><p class="swatch__hex">#0f2540</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--text-primary)"></div><div class="swatch__meta"><p class="swatch__name">Text / Primary</p><p class="swatch__var">--text-primary</p><p class="swatch__hex">#1a1f24</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--text-secondary)"></div><div class="swatch__meta"><p class="swatch__name">Text / Secondary</p><p class="swatch__var">--text-secondary</p><p class="swatch__hex">#4d5862</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--text-muted)"></div><div class="swatch__meta"><p class="swatch__name">Text / Muted</p><p class="swatch__var">--text-muted</p><p class="swatch__hex">#6b7783</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--bg-subtle)"></div><div class="swatch__meta"><p class="swatch__name">Surface / Subtle</p><p class="swatch__var">--bg-subtle</p><p class="swatch__hex">#f4f6f8</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--bg-card)"></div><div class="swatch__meta"><p class="swatch__name">Surface / Card</p><p class="swatch__var">--bg-card</p><p class="swatch__hex">#f7f8fa</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--bg-mint)"></div><div class="swatch__meta"><p class="swatch__name">Surface / Mint</p><p class="swatch__var">--bg-mint</p><p class="swatch__hex">#dbf1ee</p></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--border-default)"></div><div class="swatch__meta"><p class="swatch__name">Border / Default</p><p class="swatch__var">--border-default</p><p class="swatch__hex">#dde2e8</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACING -->
+    <section class="kit-section" id="spacing">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Spacing scale</h2>
+        <p class="kit-section__desc">A small, consistent scale used for padding and gaps throughout the system.</p>
+      </div>
+      <div class="kit-body">
+        <div class="spec">
+          <div class="spec__row"><span class="spec__label">--space-3 · 12px</span><div class="spec__bar" style="width:12px"></div></div>
+          <div class="spec__row"><span class="spec__label">--space-4 · 16px</span><div class="spec__bar" style="width:16px"></div></div>
+          <div class="spec__row"><span class="spec__label">--space-5 · 24px</span><div class="spec__bar" style="width:24px"></div></div>
+          <div class="spec__row"><span class="spec__label">--space-7 · 48px</span><div class="spec__bar" style="width:48px"></div></div>
+          <div class="spec__row"><span class="spec__label">--space-8 · 64px</span><div class="spec__bar" style="width:64px"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RADIUS -->
+    <section class="kit-section" id="radius">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Corner radius</h2>
+        <p class="kit-section__desc">Three radii: small for marks, medium for controls, large for cards and panels.</p>
+      </div>
+      <div class="kit-body">
+        <div class="spec">
+          <div class="spec__row"><span class="spec__label">--radius-sm · 4px</span><div class="spec__radius" style="border-radius:var(--radius-sm)"></div></div>
+          <div class="spec__row"><span class="spec__label">--radius-md · 8px</span><div class="spec__radius" style="border-radius:var(--radius-md)"></div></div>
+          <div class="spec__row"><span class="spec__label">--radius-lg · 16px</span><div class="spec__radius" style="border-radius:var(--radius-lg)"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="kit-section" id="type">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Typography</h2>
+        <p class="kit-section__desc">Typeface: <strong>Inter</strong>. Headings use the <code>.h1</code>–<code>.h3</code> classes; body copy uses <code>.lead</code> / <code>.prose</code>.</p>
+      </div>
+      <div class="kit-body">
+        <div class="type-row"><span class="h1" style="margin:0">Heading 1</span><span class="type-row__spec">.h1 · 52px / 700</span></div>
+        <div class="type-row"><span class="h2" style="margin:0">Heading 2</span><span class="type-row__spec">.h2 · 40px / 700</span></div>
+        <div class="type-row"><span class="h3" style="margin:0">Heading 3</span><span class="type-row__spec">.h3 · 28px / 600</span></div>
+        <div class="type-row"><span class="lead" style="margin:0">Lead paragraph — supporting intro copy.</span><span class="type-row__spec">.lead · 18px</span></div>
+        <div class="type-row"><span style="font-size:var(--fs-base)">Body text — the default size.</span><span class="type-row__spec">16px / 400</span></div>
+        <div class="type-row"><span class="eyebrow" style="margin:0">Eyebrow label</span><span class="type-row__spec">.eyebrow · 13px / 600 / uppercase</span></div>
+      </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section class="kit-section" id="buttons">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Buttons</h2>
+        <p class="kit-section__desc">Three variants: <code>.btn--primary</code>, <code>.btn--secondary</code>, <code>.btn--ghost</code>. Add the base <code>.btn</code> class to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>.</p>
+      </div>
+      <div class="kit-body">
+        <div class="kit-demo">
+          <div class="btn-group">
+            <button class="btn btn--primary" type="button">Apply for funding</button>
+            <button class="btn btn--secondary" type="button">Learn more</button>
+            <button class="btn btn--ghost" type="button">FAQ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM FIELDS -->
+    <section class="kit-section" id="forms">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Form fields</h2>
+        <p class="kit-section__desc">Label + control pattern using <code>.form-field</code> and <code>.form-field__control</code>. Works for inputs and textareas.</p>
+      </div>
+      <div class="kit-body">
+        <div class="kit-demo">
+          <div class="form" style="max-width:560px">
+            <div class="form-field">
+              <label class="form-field__label" for="kit-name">Your name</label>
+              <input class="form-field__control" id="kit-name" type="text" placeholder="Enter your name" />
+            </div>
+            <div class="form-field">
+              <label class="form-field__label" for="kit-msg">Message</label>
+              <textarea class="form-field__control" id="kit-msg" placeholder="Type your enquiry..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section class="kit-section" id="cards">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Cards</h2>
+        <p class="kit-section__desc">News card (<code>.card</code>), category card (<code>.category</code>) and team card (<code>.team</code>).</p>
+      </div>
+      <div class="kit-body">
+        <div class="kit-grid kit-grid--3">
+          <a class="card" href="#">
+            <div class="card__image" style="background-image:url('../assets/img/news.jpg')"></div>
+            <div class="card__body">
+              <p class="card__date">20 Mar 2026</p>
+              <h3 class="card__title">February Grants List</h3>
+              <p class="card__excerpt">We have been delighted to welcome our new Grants Manager to the Trust.</p>
+              <span class="card__more">Read more &rarr;</span>
+            </div>
+          </a>
+          <div class="category">
+            <div class="category__accent" aria-hidden="true"></div>
+            <h3 class="category__title">Youth Opportunities</h3>
+            <p class="category__text">Supporting work with young people aged up to 25, building life skills to progress into education or training.</p>
+          </div>
+          <div class="team">
+            <div class="team__avatar" aria-hidden="true">RP</div>
+            <h3 class="team__name">Rhea Patel</h3>
+            <p class="team__role">Grants Manager</p>
+            <p class="team__bio">Supporting the Trust's grants assessment and management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="kit-section" id="accordion">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Accordion</h2>
+        <p class="kit-section__desc">Used on the FAQ page. Toggle behaviour is wired up by <code>app.js</code> via <code>aria-expanded</code> / <code>aria-controls</code>.</p>
+      </div>
+      <div class="kit-body" style="max-width:760px;margin-inline:0">
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="kit-faq-1">
+              What do you fund? <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__panel" id="kit-faq-1">
+              <div class="accordion__panel-inner">We support charities and CIOs with a national reach that carry out work within our categories.</div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="kit-faq-2">
+              How do I apply? <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__panel" id="kit-faq-2" hidden>
+              <div class="accordion__panel-inner">Apply via the Expression of Interest form, usually after completing the eligibility quiz.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ OPTION -->
+    <section class="kit-section" id="quiz">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Quiz card</h2>
+        <p class="kit-section__desc">The eligibility quiz pattern: progress bar, question, selectable options (<code>.quiz__option</code>) and navigation.</p>
+      </div>
+      <div class="kit-body">
+        <div class="quiz" style="margin-inline:0">
+          <p class="eyebrow eyebrow--accent">Question 1 of 5</p>
+          <div class="quiz__progress"><div class="quiz__progress-bar" style="width:20%"></div></div>
+          <h2 class="quiz__question">Does your charity operate with a national reach?</h2>
+          <div class="quiz__options">
+            <label class="quiz__option quiz__option--selected"><input type="radio" name="kit-q" checked /><span>Yes — we work nationally or across multiple regions</span></label>
+            <label class="quiz__option"><input type="radio" name="kit-q" /><span>No — we work in a single location</span></label>
+          </div>
+          <div class="quiz__nav">
+            <button class="btn btn--ghost" type="button" disabled>&larr; Back</button>
+            <button class="btn btn--primary" type="button">Next question &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVBAR & FOOTER -->
+    <section class="kit-section" id="navfoot">
+      <div class="kit-section__head">
+        <h2 class="kit-section__title">Navbar &amp; Footer</h2>
+        <p class="kit-section__desc">Shared layout parts rendered by <code>components.js</code> (a single source of truth → WordPress <code>header.php</code> / <code>footer.php</code>).</p>
+      </div>
+      <div class="kit-body">
+        <div class="kit-demo kit-demo--pad0">
+          <p class="kit-demo__label" style="padding:var(--space-4) var(--space-5) 0">Navbar / Desktop</p>
+          <div style="position:relative">
+            <div class="navbar" style="position:static">
+              <div class="navbar__inner">
+                <a class="navbar__logo" href="#"><span class="navbar__mark" aria-hidden="true">N</span><span class="navbar__brand">The Northvale Trust</span></a>
+                <nav class="navbar__links" aria-label="Demo">
+                  <a href="#" aria-current="page">Home</a><a href="#">About us</a><a href="#">FAQ</a><a href="#">News</a><a href="#">Contact</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-demo kit-demo--pad0" style="margin-top:var(--space-5)">
+          <div class="footer" style="padding-block:var(--space-7) var(--space-5)">
+            <div class="container">
+              <div class="footer__grid">
+                <div class="footer__col">
+                  <div class="footer__brand"><span class="navbar__mark" aria-hidden="true">N</span> The Northvale Trust</div>
+                  <ul><li><p>Northvale House</p></li><li><p>40 Charterhouse Street</p></li><li><p>London EC1M 6JN</p></li></ul>
+                </div>
+                <div class="footer__col"><h4>Contact</h4><ul><li><a href="#">grants@northvale.org</a></li><li><a href="#">+44 (0) 20 7946 0321</a></li></ul></div>
+                <div class="footer__col"><h4>Explore</h4><ul><li><a href="#">About us</a></li><li><a href="#">FAQ</a></li><li><a href="#">News</a></li><li><a href="#">Grants data</a></li></ul></div>
+                <div class="footer__col"><h4>Legal</h4><ul><li><a href="#">Cookies</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of use</a></li></ul></div>
+              </div>
+              <div class="footer__bottom">Company limited by guarantee No. 8421006. Charity registered in England and Wales No. 1199240.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" style="border-bottom:0">
+      <div class="kit-body">
+        <a class="btn btn--ghost" href="../index.html">&larr; Back to the live site</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

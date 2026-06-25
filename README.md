@@ -69,3 +69,10 @@ Change a token once and it propagates everywhere.
 The markup is plain semantic HTML with stable class names, so the CSS carries
 over without edits; only the data sources get wired to WordPress.
 ```
+
+## UI Kit / design system
+
+A living style guide lives in [`ui-kit/`](ui-kit/) (`/ui-kit/` when served).
+It documents the colour tokens, spacing, radius, typography and every
+component, rendered from the same `tokens.css` / `styles.css` as the site —
+so it never drifts from the real components.

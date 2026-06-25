@@ -1,0 +1,71 @@
+/* ==========================================================================
+   UI Kit / design-system page layout helpers.
+   Component styles themselves come from ../assets/css/styles.css; this file
+   only styles the documentation scaffolding (swatches, spec rows, demos).
+   ========================================================================== */
+
+.kit-header {
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+  padding-block: var(--space-8);
+}
+.kit-header__inner { max-width: var(--container-max); margin-inline: auto; padding-inline: var(--space-8); }
+.kit-header__title { font-size: var(--fs-4xl); font-weight: 700; margin: 0 0 var(--space-4); letter-spacing: -0.02em; }
+.kit-header__subtitle { font-size: var(--fs-lg); color: rgba(255,255,255,0.85); margin: 0; max-width: 60ch; }
+
+/* In-page nav */
+.kit-toc { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
+.kit-toc a {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-on-brand);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.kit-toc a:hover { background: rgba(255,255,255,0.12); text-decoration: none; }
+
+/* Section */
+.kit-section { padding-block: var(--space-8); border-bottom: 1px solid var(--border-default); }
+.kit-section__head { max-width: var(--container-max); margin: 0 auto var(--space-7); padding-inline: var(--space-8); }
+.kit-section__title { font-size: var(--fs-2xl); font-weight: 700; margin: 0 0 8px; }
+.kit-section__desc { color: var(--text-secondary); margin: 0; max-width: 70ch; }
+.kit-body { max-width: var(--container-max); margin-inline: auto; padding-inline: var(--space-8); }
+
+/* Generic responsive grid for demo tiles */
+.kit-grid { display: grid; gap: var(--space-5); }
+.kit-grid--swatch { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.kit-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.kit-grid--2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 880px) { .kit-grid--3, .kit-grid--2 { grid-template-columns: 1fr; } }
+
+/* Colour swatch */
+.swatch { border: 1px solid var(--border-default); border-radius: var(--radius-md); overflow: hidden; }
+.swatch__chip { height: 88px; }
+.swatch__meta { padding: var(--space-3) var(--space-4); }
+.swatch__name { font-weight: 600; font-size: var(--fs-sm); margin: 0; }
+.swatch__var { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--text-secondary); margin: 2px 0 0; }
+.swatch__hex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--text-muted); margin: 2px 0 0; text-transform: uppercase; }
+
+/* Spec rows (spacing / radius / type) */
+.spec { display: grid; gap: var(--space-4); }
+.spec__row { display: grid; grid-template-columns: 140px 1fr; gap: var(--space-5); align-items: center; }
+.spec__label { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--text-secondary); }
+.spec__bar { background: var(--accent); height: 16px; border-radius: 2px; }
+.spec__radius { background: var(--bg-card); border: 1px solid var(--border-strong); height: 64px; width: 96px; }
+
+/* Demo surface – where live components are shown */
+.kit-demo {
+  background: var(--bg-page);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+.kit-demo--pad0 { padding: 0; overflow: hidden; }
+.kit-demo + .kit-demo { margin-top: var(--space-5); }
+.kit-demo__label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 var(--space-4); }
+.kit-stack { display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start; }
+
+.type-row { display: flex; align-items: baseline; gap: var(--space-5); flex-wrap: wrap; padding-block: var(--space-3); border-bottom: 1px solid var(--border-default); }
+.type-row:last-child { border-bottom: 0; }
+.type-row__spec { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--text-muted); white-space: nowrap; }
